@@ -33,35 +33,67 @@ def get_pets_by_breed(cc_pet_shop, pet_breed):
         if pet["breed"] == pet_breed:
             pets.append(pet)
     return pets
-    
-ef get_pets_by_breed(cc_pet_shop, pet_breed):
+
+def get_pets_by_breed(cc_pet_shop, pet_breed):
     pets = []
     for pet in cc_pet_shop["pets"]:
         if pet["breed"] == pet_breed:
             pets.append(pet)
     return pets
+
+def find_pet_by_name(cc_pet_shop, pet_name):
+    for name in cc_pet_shop["pets"]:
+        if name["name"] == pet_name:
+            return name
+
+def find_pet_by_name(cc_pet_shop, pet_name):
+    for name in cc_pet_shop["pets"]:
+        if name["name"] == pet_name:
+            return name
+
+def remove_pet_by_name(cc_pet_shop, remove_pet_name):
+    for name in cc_pet_shop["pets"]:
+        if name["name"] == remove_pet_name:
+            cc_pet_shop["pets"].remove(name)
+
+def add_pet_to_stock(cc_pet_shop, new_pet):
+    cc_pet_shop["pets"].append(new_pet)
+    return len(cc_pet_shop["pets"])
+
+def get_customer_cash(customers):
+    return(customers["cash"])
+
+def remove_customer_cash(customers, cash_to_remove):
+    customers["cash"] -= cash_to_remove
+
+def get_customer_pet_count(customers):
+    return sum(pets["pets"] for pets in customers["pets"])
+
+def add_pet_to_customer(customers, new_pet):
+    customers["pets"].append(new_pet)
+    return sum(pets["pets"] for pets in customers["pets"])
+
+ 
+
+
+    
+        
+
+   
+    
+    
+  
+
+
+
+    
+
+
+
     
     
     
-    # for breed in cc_pet_shop["pets"]:
-    #     if breed["breed"] == pet_breed:
-    #         return type
-
-
-
-
-# def find_pet_by_name(cc_pet_shop, pet_name):
-#     for pet in cc_pet_shop["pets"]["breed"]:
-#         if pet["name"][""] == pet_name:
-#             return pet_name
-
-
-
-# def find_user_by_id(list, user_id):
-#     for user in list:
-#         if user["user_id"] == user_id:
-#             return user
-#     return None
+    
 
 
 
